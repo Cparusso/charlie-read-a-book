@@ -15,23 +15,23 @@
     body { margin:0; color:var(--ink); background:var(--cream); font:16px/1.6 "DM Sans",sans-serif; }
     img { display:block; width:100%; }
     a { color:inherit; }
-    .wrap { width:min(1120px,calc(100% - 40px)); margin-inline:auto; }
-    .eyebrow { margin:0 0 16px; color:var(--sage); font-size:.75rem; font-weight:600; letter-spacing:.28em; text-transform:uppercase; }
-    h1,h2,h3 { margin:0; font-family:"Libre Caslon Display",Georgia,serif; font-weight:400; line-height:1.03; }
+    .wrap { width:min(1180px,calc(100% - 40px)); margin-inline:auto; }
+    .eyebrow { margin:0 0 18px; color:var(--sage); font-size:.78rem; font-weight:600; letter-spacing:.3em; text-transform:uppercase; }
+    h1,h2,h3 { margin:0; font-family:"Libre Caslon Display",Georgia,serif; font-weight:400; line-height:1.02; }
     h1 { font-size:clamp(3.2rem,5.5vw,5.8rem); }
     h2 { font-size:clamp(2.5rem,5vw,4.8rem); }
     h3 { font-size:1.65rem; }
     p { margin:0; }
-    .button { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 24px; border:1px solid currentColor; background:transparent; color:inherit; cursor:pointer; text-decoration:none; font:600 .75rem/1 "DM Sans",sans-serif; letter-spacing:.14em; text-transform:uppercase; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 24px; border:1px solid currentColor; background:transparent; color:inherit; cursor:pointer; text-decoration:none; font:600 .78rem/1 "DM Sans",sans-serif; letter-spacing:.14em; text-transform:uppercase; }
     header { position:absolute; z-index:2; inset:0 0 auto; color:var(--cream-2); }
-    nav { display:flex; justify-content:space-between; align-items:center; padding:28px 0; }
-    .brand { text-decoration:none; font-family:"Libre Caslon Display",serif; font-size:1.15rem; letter-spacing:.15em; line-height:1.35; text-transform:uppercase; }
-    .navlinks { display:flex; gap:26px; font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:30px 0; }
+    .brand { text-decoration:none; font-family:"Libre Caslon Display",serif; font-size:1.3rem; letter-spacing:.16em; line-height:normal; text-transform:uppercase; }
+    .navlinks { display:flex; gap:26px; font-size:.76rem; letter-spacing:.12em; text-transform:uppercase; }
     .navlinks a { text-decoration:none; }
-    .hero { min-height:clamp(540px,58vh,600px); display:grid; align-items:end; color:var(--cream-2); background-color:#050d09; background-image:linear-gradient(90deg,rgba(5,13,9,1) 0%,rgba(5,13,9,.98) 43%,rgba(5,13,9,.62) 60%,rgba(5,13,9,.08) 82%),url("assets/charlie-microphone.jpg"); background-position:center,86% center; background-size:100% 100%,auto 100%; background-repeat:no-repeat; }
+    .hero { min-height:clamp(540px,58vh,600px); display:grid; align-items:end; color:var(--cream-2); background-color:#050d09; background-image:linear-gradient(90deg,rgba(5,13,9,1) 0%,rgba(5,13,9,1) 44%,rgba(5,13,9,.96) 48%,rgba(5,13,9,.72) 56%,rgba(5,13,9,.3) 65%,rgba(5,13,9,0) 74%),url("assets/charlie-microphone.jpg"); background-position:left center,88% center; background-size:100% 100%,auto 100%; background-repeat:no-repeat; }
     .hero-copy { max-width:600px; padding:105px 0 34px; }
     .hero-copy p:not(.eyebrow) { max-width:560px; margin:26px 0 34px; color:#d8d8cd; font-size:clamp(1.05rem,2vw,1.3rem); }
-    section { padding:100px 0; }
+    section { padding:110px 0; }
     .intro-grid { display:grid; grid-template-columns:260px 1fr; gap:72px; align-items:center; }
     .portrait { aspect-ratio:1; border-radius:50%; object-fit:cover; }
     .intro-copy p:not(.eyebrow) { max-width:680px; margin-top:26px; color:#536158; font-size:1.1rem; }
@@ -62,12 +62,14 @@
     @media (max-width:800px) {
       .navlinks { display:none; }
       nav { padding:24px 0; }
-      .hero { min-height:620px; background-image:linear-gradient(90deg,rgba(5,13,9,.98) 0%,rgba(5,13,9,.88) 42%,rgba(5,13,9,.35) 82%),linear-gradient(0deg,rgba(5,13,9,1) 0%,rgba(5,13,9,.94) 38%,rgba(5,13,9,.12) 82%),url("assets/charlie-microphone.jpg"); background-position:center,center,34% 8px; background-size:100% 100%,100% 100%,auto 76%; }
+      .brand { font-size:1.08rem; line-height:1.35; }
+      .hero { min-height:620px; background-image:linear-gradient(90deg,rgba(5,13,9,.98) 0%,rgba(5,13,9,.94) 30%,rgba(5,13,9,.72) 54%,rgba(5,13,9,.24) 82%),linear-gradient(0deg,rgba(5,13,9,1) 0%,rgba(5,13,9,.98) 27%,rgba(5,13,9,.72) 52%,rgba(5,13,9,.12) 82%),url("assets/charlie-microphone.jpg"); background-position:center,center,34% 12px; background-size:100% 100%,100% 100%,auto 76%; }
       .hero-copy { max-width:355px; padding:150px 0 32px; }
+      .hero .eyebrow { max-width:285px; margin-bottom:14px; font-size:.66rem; line-height:1.7; letter-spacing:.22em; }
       .hero h1 { font-size:clamp(2.9rem,13.5vw,3.45rem); line-height:.98; }
       .hero-copy p:not(.eyebrow) { max-width:330px; margin:20px 0 26px; font-size:.98rem; line-height:1.55; }
       .hero .button { min-height:46px; padding:0 20px; font-size:.7rem; }
-      section { padding:76px 0; }
+      section { padding:80px 0; }
       .intro-grid,.sample-grid,.work-card,.inquiry-grid { grid-template-columns:1fr; }
       .intro-grid,.inquiry-grid { gap:38px; }
       .portrait { width:150px; }
