@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Audiobook narration by Charlie Russo — samples, selected work, and project inquiries.">
+  <title>Audiobook Narration — Charlie Russo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <style>
+    :root { --green:#0d261d; --green-2:#17372a; --cream:#eee5d4; --cream-2:#f7f1e6; --sage:#95a486; --ink:#15251d; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font:16px/1.6 "DM Sans",sans-serif; }
+    img { display:block; width:100%; }
+    a { color:inherit; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin-inline:auto; }
+    .eyebrow { margin:0 0 16px; color:var(--sage); font-size:.75rem; font-weight:600; letter-spacing:.28em; text-transform:uppercase; }
+    h1,h2,h3 { margin:0; font-family:"Libre Caslon Display",Georgia,serif; font-weight:400; line-height:1.03; }
+    h1 { font-size:clamp(3.4rem,7vw,7rem); }
+    h2 { font-size:clamp(2.5rem,5vw,4.8rem); }
+    h3 { font-size:1.65rem; }
+    p { margin:0; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 24px; border:1px solid currentColor; background:transparent; color:inherit; cursor:pointer; text-decoration:none; font:600 .75rem/1 "DM Sans",sans-serif; letter-spacing:.14em; text-transform:uppercase; }
+    header { position:absolute; z-index:2; inset:0 0 auto; color:var(--cream-2); }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:28px 0; }
+    .brand { text-decoration:none; font-family:"Libre Caslon Display",serif; font-size:1.15rem; letter-spacing:.15em; line-height:1.35; text-transform:uppercase; }
+    .navlinks { display:flex; gap:26px; font-size:.74rem; letter-spacing:.12em; text-transform:uppercase; }
+    .navlinks a { text-decoration:none; }
+    .hero { min-height:620px; display:grid; align-items:end; color:var(--cream-2); background-color:#050d09; background-image:linear-gradient(90deg,rgba(5,13,9,1) 0%,rgba(5,13,9,.98) 43%,rgba(5,13,9,.62) 60%,rgba(5,13,9,.08) 82%),url("assets/charlie-microphone.jpg"); background-position:center,86% center; background-size:100% 100%,auto 100%; background-repeat:no-repeat; }
+    .hero-copy { max-width:650px; padding:140px 0 62px; }
+    .hero-copy p:not(.eyebrow) { max-width:560px; margin:26px 0 34px; color:#d8d8cd; font-size:1.13rem; }
+    section { padding:100px 0; }
+    .intro-grid { display:grid; grid-template-columns:260px 1fr; gap:72px; align-items:center; }
+    .portrait { aspect-ratio:1; border-radius:50%; object-fit:cover; }
+    .intro-copy p:not(.eyebrow) { max-width:680px; margin-top:26px; color:#536158; font-size:1.1rem; }
+    .samples { color:var(--cream-2); background:var(--green); }
+    .section-head { max-width:720px; margin-bottom:44px; }
+    .section-head p:not(.eyebrow) { margin-top:22px; color:#cbd0c5; }
+    .sample-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+    .sample-card { min-height:260px; display:flex; flex-direction:column; justify-content:space-between; padding:28px; border:1px solid rgba(247,241,230,.22); background:#102f23; }
+    .sample-card p { margin-top:14px; color:#bdc6ba; font-size:.94rem; }
+    .sample-status { color:var(--sage); font-size:.68rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; }
+    .work { background:var(--cream-2); }
+    .work-card { display:grid; grid-template-columns:1.1fr .9fr; gap:64px; align-items:center; padding:58px; border:1px solid #c9c1b2; }
+    .work-card img { aspect-ratio:4/3; object-fit:cover; border-radius:14px; }
+    .work-copy p:not(.eyebrow) { margin-top:24px; color:#536158; }
+    .inquiry { color:var(--cream-2); background:var(--green-2); }
+    .inquiry-grid { display:grid; grid-template-columns:.8fr 1.2fr; gap:72px; align-items:start; }
+    .inquiry-copy p:not(.eyebrow) { margin-top:24px; color:#d5d6ca; }
+    form { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    label { display:grid; gap:7px; color:var(--sage); font-size:.68rem; font-weight:600; letter-spacing:.16em; text-transform:uppercase; }
+    label.full { grid-column:1/-1; }
+    input,select,textarea { width:100%; border:1px solid rgba(247,241,230,.28); border-radius:0; padding:13px 14px; color:var(--cream-2); background:rgba(5,13,9,.25); font:inherit; }
+    textarea { min-height:130px; resize:vertical; }
+    select option { color:var(--ink); background:var(--cream-2); }
+    form .button { grid-column:1/-1; justify-self:start; margin-top:4px; }
+    .form-note { grid-column:1/-1; color:#aeb9ab; font-size:.78rem; }
+    footer { padding:28px 0; color:#bfc7bb; background:#081812; font-size:.76rem; letter-spacing:.08em; text-transform:uppercase; }
+    footer .wrap { display:flex; justify-content:space-between; gap:20px; }
+    @media (max-width:800px) {
+      .navlinks { display:none; }
+      nav { padding:24px 0; }
+      .hero { min-height:620px; background-image:linear-gradient(90deg,rgba(5,13,9,.98) 0%,rgba(5,13,9,.88) 42%,rgba(5,13,9,.35) 82%),linear-gradient(0deg,rgba(5,13,9,1) 0%,rgba(5,13,9,.94) 38%,rgba(5,13,9,.12) 82%),url("assets/charlie-microphone.jpg"); background-position:center,center,34% 8px; background-size:100% 100%,100% 100%,auto 76%; }
+      .hero-copy { padding:150px 0 38px; }
+      .hero h1 { font-size:clamp(3rem,14vw,4rem); }
+      .hero-copy p:not(.eyebrow) { max-width:345px; font-size:1rem; }
+      section { padding:76px 0; }
+      .intro-grid,.sample-grid,.work-card,.inquiry-grid { grid-template-columns:1fr; }
+      .intro-grid,.inquiry-grid { gap:38px; }
+      .portrait { width:150px; }
+      .work-card { padding:30px 26px; gap:32px; }
+      form { grid-template-columns:1fr; }
+      label.full,form .button,.form-note { grid-column:1; }
+      footer .wrap { flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <header><nav class="wrap"><a class="brand" href="index.html">Charlie<br>Read a Book</a><div class="navlinks"><a href="index.html">Home</a><a href="#samples">Samples</a><a href="#work">Selected Work</a><a href="#inquiry">Project Inquiry</a></div></nav></header>
+  <main>
+    <section class="hero"><div class="wrap hero-copy"><p class="eyebrow">Audiobook narration</p><h1>Stories deserve<br>a voice.</h1><p>Warm, thoughtful narration for ambitious fiction, strange worlds, and books that invite listeners to stay awhile.</p><a class="button" href="#inquiry">Discuss a project →</a></div></section>
+
+    <section><div class="wrap intro-grid"><img class="portrait" src="assets/charlie-portrait.jpg" alt="Charlie Russo smiling in front of his bookshelves"><div class="intro-copy"><p class="eyebrow">About the narrator</p><h2>A reader first,<br>behind the microphone.</h2><p>I’m Charlie Russo, a lifelong reader and audiobook narrator drawn to fantasy, science fiction, horror, comics, and character-driven stories. This page is a growing home for narration samples, selected work, and conversations with authors and publishers.</p></div></div></section>
+
+    <section class="samples" id="samples"><div class="wrap"><div class="section-head"><p class="eyebrow">Narration samples</p><h2>Hear the range.</h2><p>Finished audio samples will live here. These placeholders show how fiction, dialogue, and nonfiction reads can be organized as the portfolio grows.</p></div><div class="sample-grid"><article class="sample-card"><div><h3>Fiction · Narrative</h3><p>An intimate, grounded read focused on atmosphere, pacing, and emotional clarity.</p></div><span class="sample-status">Sample coming soon</span></article><article class="sample-card"><div><h3>Character · Dialogue</h3><p>Distinct voices that support the story without pulling attention away from it.</p></div><span class="sample-status">Sample coming soon</span></article><article class="sample-card"><div><h3>Nonfiction · Essay</h3><p>A clear, conversational delivery for ideas, memoir, and thoughtful nonfiction.</p></div><span class="sample-status">Sample coming soon</span></article></div></div></section>
+
+    <section class="work" id="work"><div class="wrap work-card"><img src="assets/fable-buddy-read.jpg" alt="Charlie Read a Book in front of his bookshelves"><div class="work-copy"><p class="eyebrow">Selected work</p><h2>The shelf is just getting started.</h2><p>Completed audiobook projects, covers, credits, and listening links will appear here. For now, this space is ready to grow alongside the work.</p></div></div></section>
+
+    <section class="inquiry" id="inquiry"><div class="wrap inquiry-grid"><div class="inquiry-copy"><p class="eyebrow">Project inquiry</p><h2>Have a book<br>in mind?</h2><p>Share a few details about the project. Submitting the form opens a pre-addressed email in your mail app; nothing is stored on this website.</p></div><form id="inquiry-form"><label>Name<input name="name" autocomplete="name" required></label><label>Email<input name="email" type="email" autocomplete="email" required></label><label>Book title<input name="title" required></label><label>Genre<input name="genre"></label><label>Approximate word count<input name="length" inputmode="numeric"></label><label>Desired timeline<input name="timeline"></label><label class="full">Project or publishing platform<select name="platform"><option value="Not specified">Select one</option><option>ACX / Audible</option><option>Findaway Voices / Spotify</option><option>Author or publisher direct</option><option>Other</option></select></label><label class="full">About the project<textarea name="details" required></textarea></label><button class="button" type="submit">Open email inquiry →</button><p class="form-note">Your answers are placed into an email addressed to charliereadabook@gmail.com.</p></form></div></section>
+  </main>
+  <footer><div class="wrap"><span>© 2026 Charlie Read a Book</span><a href="index.html">Back to the main site →</a></div></footer>
+  <script>
+    document.getElementById("inquiry-form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const data = new FormData(event.currentTarget);
+      const subject = `Audiobook narration inquiry — ${data.get("title")}`;
+      const body = [`Name: ${data.get("name")}`,`Email: ${data.get("email")}`,`Book title: ${data.get("title")}`,`Genre: ${data.get("genre") || "Not specified"}`,`Approximate word count: ${data.get("length") || "Not specified"}`,`Desired timeline: ${data.get("timeline") || "Not specified"}`,`Platform: ${data.get("platform")}`,"", "About the project:",data.get("details")].join("\n");
+      window.location.href = `mailto:charliereadabook@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    });
+  </script>
+</body>
+</html>
