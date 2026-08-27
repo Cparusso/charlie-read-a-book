@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Charlie Read a Book — videos about fantasy, science fiction, horror, comics, and the joy of reading.">
+  <title>Charlie Read a Book</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+  <style>
+    :root { --green:#0d261d; --green-2:#17372a; --cream:#eee5d4; --cream-2:#f7f1e6; --sage:#95a486; --rust:#b85f3e; --ink:#15251d; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:var(--ink); background:var(--cream); font:16px/1.6 "DM Sans",sans-serif; }
+    img { display:block; width:100%; }
+    a { color:inherit; }
+    .wrap { width:min(1180px, calc(100% - 40px)); margin-inline:auto; }
+    .eyebrow { margin:0 0 18px; color:var(--sage); font-size:.78rem; font-weight:600; letter-spacing:.3em; text-transform:uppercase; }
+    h1,h2,h3 { margin:0; font-family:"Libre Caslon Display",Georgia,serif; font-weight:400; line-height:1.02; }
+    h1 { font-size:clamp(3.4rem,8vw,7.8rem); }
+    h2 { font-size:clamp(2.6rem,5vw,5rem); }
+    p { margin:0; }
+    .button { display:inline-flex; align-items:center; min-height:50px; padding:0 24px; border:1px solid currentColor; text-decoration:none; font-size:.78rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase; transition:.2s ease; }
+    .button:hover { color:var(--green); background:var(--cream-2); }
+    header { position:absolute; z-index:2; inset:0 0 auto; color:var(--cream-2); }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:30px 0; }
+    .brand { text-decoration:none; font-family:"Libre Caslon Display",serif; font-size:1.3rem; letter-spacing:.16em; text-transform:uppercase; }
+    .navlinks { display:flex; gap:26px; font-size:.76rem; letter-spacing:.12em; text-transform:uppercase; }
+    .navlinks a { text-decoration:none; }
+    .hero { min-height:92vh; display:grid; align-items:end; color:var(--cream-2); background:linear-gradient(90deg,rgba(8,25,18,.94) 0%,rgba(8,25,18,.72) 48%,rgba(8,25,18,.12) 78%),url("assets/charlie-microphone.png") center/cover; }
+    .hero-copy { max-width:780px; padding:180px 0 90px; }
+    .hero p:not(.eyebrow) { max-width:610px; margin:30px 0 38px; color:#dedacb; font-size:clamp(1.05rem,2vw,1.35rem); }
+    section { padding:110px 0; }
+    .intro-grid { display:grid; grid-template-columns:220px 1fr; gap:70px; align-items:center; }
+    .portrait { aspect-ratio:1; border-radius:50%; object-fit:cover; }
+    .intro-copy p { max-width:720px; margin-top:28px; color:#4f5d55; font-size:1.15rem; }
+    .videos { color:var(--cream-2); background:var(--green); }
+    .videos-head { display:flex; justify-content:space-between; gap:30px; align-items:end; margin-bottom:50px; }
+    .video-grid { display:grid; grid-template-columns:1.45fr 1fr; gap:24px; }
+    .video-side { display:grid; gap:24px; }
+    .video-card { background:#102f23; }
+    .video-frame { position:relative; aspect-ratio:16/9; overflow:hidden; background:#081812; }
+    .video-frame iframe { position:absolute; inset:0; width:100%; height:100%; border:0; }
+    .video-title { padding:20px 22px 24px; font-family:"Libre Caslon Display",serif; font-size:1.4rem; line-height:1.2; }
+    .buddy { background:var(--cream-2); }
+    .buddy-card { display:grid; grid-template-columns:.75fr 1.25fr; gap:70px; align-items:center; padding:70px; border:1px solid #c9c1b2; }
+    .buddy-mark { display:grid; place-items:center; aspect-ratio:1; border-radius:50%; color:var(--cream-2); background:var(--green); font-family:"Libre Caslon Display",serif; font-size:clamp(3rem,6vw,6rem); }
+    .buddy-copy p:not(.eyebrow) { max-width:620px; margin:26px 0 34px; color:#536158; font-size:1.12rem; }
+    .buddy .button { color:var(--cream-2); background:var(--green); }
+    .shelves { padding:0; display:grid; grid-template-columns:1.2fr .8fr; background:var(--cream); }
+    .shelves img { height:100%; min-height:650px; object-fit:cover; object-position:center; }
+    .shelves-copy { display:flex; flex-direction:column; justify-content:center; padding:80px; }
+    .shelves-copy p:not(.eyebrow) { margin-top:28px; color:#5b675f; font-size:1.15rem; }
+    .elsewhere { text-align:center; background:var(--cream-2); }
+    .elsewhere p:not(.eyebrow) { margin:24px 0 34px; color:#5b675f; }
+    .socials { display:flex; justify-content:center; flex-wrap:wrap; gap:10px 28px; }
+    .socials a { text-underline-offset:7px; text-decoration-thickness:1px; font-family:"Libre Caslon Display",serif; font-size:1.45rem; }
+    .contact { color:var(--cream-2); background:var(--green-2); text-align:center; }
+    .contact p:not(.eyebrow) { margin:25px auto 35px; color:#d5d6ca; font-size:1.12rem; }
+    footer { padding:28px 0; color:#bfc7bb; background:#081812; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase; }
+    footer .wrap { display:flex; justify-content:space-between; gap:20px; }
+    @media (max-width:800px) {
+      .navlinks { display:none; }
+      .hero { min-height:760px; background-position:64% center; }
+      section { padding:80px 0; }
+      .intro-grid,.video-grid,.buddy-card,.shelves { grid-template-columns:1fr; }
+      .intro-grid { gap:34px; }
+      .portrait { width:150px; }
+      .videos-head { align-items:start; flex-direction:column; }
+      .buddy-card { padding:36px 28px; gap:38px; }
+      .buddy-mark { max-width:240px; }
+      .shelves img { min-height:420px; }
+      .shelves-copy { padding:70px 28px; }
+      footer .wrap { flex-direction:column; }
+    }
+  </style>
+</head>
+<body>
+  <header><nav class="wrap"><a class="brand" href="#top">Charlie<br>Read a Book</a><div class="navlinks"><a href="#videos">Videos</a><a href="#buddy-read">Buddy Read</a><a href="#elsewhere">Elsewhere</a><a href="#contact">Contact</a></div></nav></header>
+  <main id="top">
+    <section class="hero"><div class="wrap hero-copy"><p class="eyebrow">Fantasy · Sci-fi · Horror · Comics</p><h1>Books worth<br>talking about.</h1><p>Thoughtful, enthusiastic videos about ambitious reads, strange worlds, and the stories I can’t stop thinking about.</p><a class="button" href="https://www.youtube.com/@CharlieReadABook" target="_blank" rel="noopener">Watch on YouTube →</a></div></section>
+
+    <section><div class="wrap intro-grid"><img class="portrait" src="assets/charlie-portrait.png" alt="Charlie smiling in front of his bookshelves"><div class="intro-copy"><p class="eyebrow">Hi, I’m Charlie</p><h2>I read widely—and usually with opinions.</h2><p>This is the home base for Charlie Read a Book: videos about fantasy, science fiction, horror, comics, big reading projects, and whatever has taken over my shelves lately.</p></div></div></section>
+
+    <section class="videos" id="videos"><div class="wrap"><div class="videos-head"><div><p class="eyebrow">Featured videos</p><h2>Start watching.</h2></div><a class="button" href="https://www.youtube.com/@CharlieReadABook" target="_blank" rel="noopener">Visit the channel →</a></div><div class="video-grid"><article class="video-card"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/rS_IO2M01Ow" title="I Wanted to Get Back Into Comics. Here’s What I Read." loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-title">I Wanted to Get Back Into Comics. Here’s What I Read.</div></article><div class="video-side"><article class="video-card"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/6NyVOhk45tk" title="My Top 10 Fantasy Books" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-title">My Top 10 Fantasy Books</div></article><article class="video-card"><div class="video-frame"><iframe src="https://www.youtube-nocookie.com/embed/kz3DvsoDsO0" title="How I Got Into Reading" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div><div class="video-title">How I Got Into Reading</div></article></div></div></div></section>
+
+    <section class="buddy" id="buddy-read"><div class="wrap buddy-card"><div class="buddy-mark" aria-hidden="true">C.</div><div class="buddy-copy"><p class="eyebrow">Read with me</p><h2>Charlie Buddy<br>Read a Book</h2><p>Want to read something together? I host an ongoing buddy read on Fable where we pick a book, read at our own pace, and talk about it along the way.</p><a class="button" href="https://fable.co/club/charlie-buddy-read-a-book-with-charlie-read-a-book-328741532671" target="_blank" rel="noopener">Join the buddy read →</a></div></div></section>
+
+    <section class="shelves"><img src="assets/bookshelves.jpeg" alt="Charlie's bookshelves and green reading couch"><div class="shelves-copy"><p class="eyebrow">On my shelves</p><h2>The shelves are always changing.</h2><p>A rotating mix of longtime favorites, strange new discoveries, giant reading projects, and whatever I’m obsessing over next.</p></div></section>
+
+    <section class="elsewhere" id="elsewhere"><div class="wrap"><p class="eyebrow">Elsewhere</p><h2>Follow along.</h2><p>More places to find me, see what I’m reading, and follow along.</p><div class="socials"><a href="https://www.instagram.com/charlie.read.a.book" target="_blank" rel="noopener">Instagram</a><a href="https://www.goodreads.com/user/show/16717343" target="_blank" rel="noopener">Goodreads</a><a href="https://boxd.it/mGCbf" target="_blank" rel="noopener">Letterboxd</a></div></div></section>
+
+    <section class="contact" id="contact"><div class="wrap"><p class="eyebrow">Contact</p><h2>For collaborations,<br>books, or just to say hi.</h2><p>The inbox is open.</p><a class="button" href="mailto:charliereadabook@gmail.com">charliereadabook@gmail.com</a></div></section>
+  </main>
+  <footer><div class="wrap"><span>© 2026 Charlie Read a Book</span><span>Read widely. Stay curious.</span></div></footer>
+</body>
+</html>
